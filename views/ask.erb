@@ -23,7 +23,24 @@
   <body>
 
     <div class="container mt-5">
+      <h1>Location</h1>
+      <iframe
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCtovsQvkIUWlNqtYwXY87gEd4ZSmJEhMw
+          &q=<%= @lat_long %>&zoom=6" allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="container mt-5">
       <h1>News</h1>
+      <iframe
+        width="600"
+        height="450"
+        frameborder="0" style="border:0"
+        src="https://newsapi.org/v2/top-headlines?country=us&apiKey=72062d412df44b118b2b3128033cf057" allowfullscreen>
+      </iframe>
     </div>
 
     <!-- Optional JavaScript -->
