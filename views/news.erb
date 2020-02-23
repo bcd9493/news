@@ -26,22 +26,20 @@
     <div class="container mt-5">
       <h1>Weather and News!</h1>
       <p>
-      <%= @current_temperature %>
+            <%= @current_temperature %>
       <%= @current_conditions %>
       </p>
     </div>
     
     <p>
     <ul>
-    <% for @weatherlist in @forecast["daily"]["data"] %>
-      <li><%= @daily_temperature %> <%= @daily_conditions %> <%= @daily_wind %> <%= @daily_humidity %> </li>
+    <% for weather_forecast in @list %>
+      <li><%= weather_forecast %></li>
     <% end %>
   </ul>
     </p>
 
-    <p>
-   <%= @news %>
-    </p>
+   
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
