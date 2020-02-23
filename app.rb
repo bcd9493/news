@@ -10,10 +10,6 @@ before { puts "Parameters: #{params}" }
 # enter your Dark Sky API key here
 ForecastIO.api_key = "9e7da56190cbaf7f50b97dda1c4adcdd"
 
-# News API
-url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=72062d412df44b118b2b3128033cf057"
-news = HTTParty.get(url).parsed_response.to_hash
-
 get "/" do
   # show a view that asks for the location
   view "ask"
@@ -48,14 +44,13 @@ results = Geocoder.search(params["q"])
   @daily_humidity = @day_forecast["humidity"]
 end
 
-# News
-
 # News API
-url = "http://newsapi.org/v2/top-headlines?q=trump&apiKey=72062d412df44b118b2b3128033cf057"
+url = "http://newsapi.org/v2/top-headlines?country=us&apiKey=72062d412df44b118b2b3128033cf057"
 news = HTTParty.get(url).parsed_response.to_hash
 
-@news_article = news[title]
-@news_url = news[url]
+pp news
+
 
 view "news"
+
 end
