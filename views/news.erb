@@ -38,6 +38,14 @@
     <% end %>
   </ul>
     </p>
+    <p>
+    <ul>
+    <% for news_forecast in @newslist %>
+      <li><%= news_forecast %></li>
+      limit 5
+    <% end %>
+  </ul>
+    </p>
 
    
 

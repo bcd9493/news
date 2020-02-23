@@ -42,7 +42,7 @@ results = Geocoder.search(params["q"])
   @daily_wind = []
   @daily_humidity = []
 
-for @day_forecast in @forecast["daily"]["data"]
+for @day_forecast in @forecast["daily"]["data"] do
   @daily_temperature << @day_forecast["temperatureHigh"]
   @daily_conditions << @day_forecast["summary"]
   @daily_wind << @day_forecast["windSpeed"]
@@ -51,10 +51,18 @@ end
 @list = @daily_temperature, @daily_conditions, @daily_wind, @daily_humidity
 
 # News API
-url = "http://newsapi.org/v2/top-headlines?country=us&apiKey=72062d412df44b118b2b3128033cf057"
-news = HTTParty.get(url).parsed_response.to_hash
+url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=72062d412df44b118b2b3128033cf057"
+@news = HTTParty.get(url).parsed_response.to_hash
 
-@articles = news["articles"]
+  @news_title = []
+  @story_url = []
+
+for daily_news in @news["articles"] do
+  @news_title << daily_news["title"]
+  @story_url << daily_news["url"]
+  
+end
+@newslist = @news_title, @story_url
 
 
 view "news"
