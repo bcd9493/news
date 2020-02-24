@@ -28,7 +28,7 @@
   </div>
 </div>
 <p> <div class="container mt-5">
- <h1> Forecast </h1>
+ <h2> Forecast </h2>
  </div>
   </p>
 <p>
@@ -78,18 +78,18 @@
 </div>
 </p>
 <p> <div class="container mt-5">
- <h1> United States News </h1>
+ <h2> United States News </h2>
  </div>
-  </p>
+</p>
 <div class="container mt-5">
-    <% for article in @news["articles"] %>
+    <% for article in @news["articles"][0,10] %>
     <p><a href= "<%= article["url"] %>"> <%= article["title"] %></a></p>
 
     <% end %>
 </div>
 <p>
 <div class="container mt-5">
-      <h1>Another Location?</h1>
+      <h3>Another Location?</h3>
       <form action="/news">
         <input type="text" name="q">
         <button type="submit">Again?</submit>
