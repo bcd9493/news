@@ -19,12 +19,13 @@
 <title>News & Weather</title>
   </head>
   <body>
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron">
   <div class="container">
     <h1 class="display-4">Weather and News!</h1>
     <p class="lead">It is currently <%= @current_temperature %> degrees and <%= @current_conditions %> in <%= @location %>.</p>
   </div>
 </div>
+
 <p>
 <div class="container mt-5">
 <table class="table">
@@ -71,12 +72,24 @@
 </table>
 </div>
 </p>
+<p> <div class="container mt-5">
+ <h1> United States News </h1>
+ </div>
+  </p>
 <div class="container mt-5">
     <% for article in @news["articles"] %>
     <p><a href= "<%= article["url"] %>"> <%= article["title"] %></a></p>
     <% end %>
 </div>
-   
+<p>
+<div class="container mt-5">
+      <h1>Another Location?</h1>
+      <form action="/news">
+        <input type="text" name="q">
+        <button type="submit">Again?</submit>
+      </form>
+    </div>
+</p>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

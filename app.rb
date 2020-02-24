@@ -20,7 +20,7 @@ get "/news" do
 
 results = Geocoder.search(params["q"])
     @lat_long = results.first.coordinates # => [lat, long]
-    @location = results.first.city
+    @location = params["q"].capitalize
 
 # Define the lat and long
 @lat = "#{@lat_long [0]}"
