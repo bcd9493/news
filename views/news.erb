@@ -19,22 +19,27 @@
 <title>News & Weather</title>
   </head>
   <body>
+
+
 <div class="jumbotron">
   <div class="container">
     <h1 class="display-4">Weather and News!</h1>
     <p class="lead">It is currently <%= @current_temperature %> degrees and <%= @current_conditions %> in <%= @location %></p>
   </div>
 </div>
-
+<p> <div class="container mt-5">
+ <h1> Forecast </h1>
+ </div>
+  </p>
 <p>
 <div class="container mt-5">
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Day</th>
-      <th scope="col">Temperature</th>
-      <th scope="col">Wind</th>
-      <th scope="col">Conditions</th>
+      <th scope="col"><i class="far fa-calendar-alt fa-2x"></i></th>
+      <th scope="col"><i class="fas fa-thermometer-half fa-2x"></i></th>
+      <th scope="col"><i class="fas fa-wind fa-2x"></i></th>
+      <th scope="col"><i class="fas fa-cloud-sun fa-2x"></i></th>
     </tr>
   </thead>
   <tbody>
@@ -79,6 +84,7 @@
 <div class="container mt-5">
     <% for article in @news["articles"] %>
     <p><a href= "<%= article["url"] %>"> <%= article["title"] %></a></p>
+
     <% end %>
 </div>
 <p>
