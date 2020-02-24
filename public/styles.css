@@ -1,5 +1,9 @@
-.display-4{font-family: 'Trade Winds'; font-size: 70px;}
-.lead {font-family: 'Trade Winds'; font-size: 30px; }
+.display-4{font-family: 'Trade Winds'; font-size: 80px;margin-bottom: 20px;}
+.lead {font-family: 'Trade Winds'; font-size: 40px; }
 h2 {font-family: 'Trade Winds'; font-size: 50px}
 h3 {font-family: 'Trade Winds'; font-size: 30px}
-.jumbotron{background-color: rgb(226, 241, 248)}
+body{background-color: rgb(247, 242, 242)}
+.jumbotron{background-color: rgb(4, 99, 139); color: white}
+.table td{border-color: black}
+.table th{border-color: black}
+.table {margin-right: auto}
