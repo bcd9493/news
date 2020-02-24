@@ -24,7 +24,8 @@
 <div class="jumbotron">
   <div class="container">
     <h1 class="display-4">Weather and News!</h1>
-    <p class="lead">It is currently <%= @current_temperature %> degrees and <%= @current_conditions %> in <%= @location %></p>
+    <p class="lead">It is currently <%= @current_temperature %>°F and <%= @current_conditions %> 
+    in <%= @location %></p>
   </div>
 </div>
 <p> <div class="container mt-5">
@@ -45,31 +46,31 @@
   <tbody>
     <tr>
       <th scope="row">Tomorrow</th>
-      <td><%=@daily_temperature[0]%> degrees</td>
+      <td><%=@daily_temperature[0]%>℉</td>
       <td><%=@daily_wind[0]%>mph</td>
       <td><%=@daily_conditions[0]%></td>
     </tr>
     <tr>
       <th scope="row">In Two Days</th>
-      <td><%=@daily_temperature[1]%> degrees</td>
+      <td><%=@daily_temperature[1]%>℉</td>
       <td><%=@daily_wind[1]%>mph</td>
       <td><%=@daily_conditions[1]%></td>
     </tr>
     <tr>
       <th scope="row">In Three Days</th>
-      <td><%=@daily_temperature[2]%> degrees</td>
+      <td><%=@daily_temperature[2]%>℉</td>
       <td><%=@daily_wind[2]%>mph</td>
       <td><%=@daily_conditions[2]%></td>
     </tr>
     <tr>
       <th scope="row">In Four Days</th>
-      <td><%=@daily_temperature[3]%> degrees</td>
+      <td><%=@daily_temperature[3]%>℉</td>
       <td><%=@daily_wind[3]%>mph</td>
       <td><%=@daily_conditions[3]%></td>
     </tr>
     <tr>
       <th scope="row">In Five Days</th>
-      <td><%=@daily_temperature[4]%> degrees</td>
+      <td><%=@daily_temperature[4]%>℉</td>
       <td><%=@daily_wind[4]%>mph</td>
       <td><%=@daily_conditions[4]%></td>
     </tr>
